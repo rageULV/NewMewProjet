@@ -33,7 +33,7 @@ public class LetTheCarWorkPage extends BasePage{
                 .xpath("//input[@id='pickUpPlace']")); // Находим поле ввода для местоположения на веб-странице с помощью XPath-выражения.
         locationField.clear(); //Очищаем поле ввода от предыдущего содержимого.
         locationField.sendKeys(location); // Вводим указанное местоположение в поле ввода.
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         WebElement element = wait
                 .until(ExpectedConditions
                 .visibilityOfElementLocated(By.xpath("//div[@class='pac-item']")));
